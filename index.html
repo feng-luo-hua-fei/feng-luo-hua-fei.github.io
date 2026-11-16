@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="风落的个人空间。记录课程学习、个人实践与思考，分享整理后的笔记和报告。">
+  <title>风落 · 学习与记录</title>
+  <style>
+    :root { --paper:#f8f7f3; --ink:#292e2a; --muted:#747970; --green:#47644e; --line:#dedfd5; --soft:#eef0e7; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:34px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible { outline:2px solid var(--green); outline-offset:6px; border-radius:2px; }
+    .wrap { width:min(1080px,calc(100% - 96px)); margin:auto; }
+    .skip { position:absolute; left:20px; top:-70px; background:var(--ink); color:white; padding:12px; z-index:9; }
+    .skip:focus { top:10px; }
+    header { display:flex; align-items:center; justify-content:space-between; min-height:104px; border-bottom:1px solid var(--line); gap:24px; }
+    .brand { font-family:"Songti SC","Noto Serif CJK SC",SimSun,serif; font-size:26px; font-weight:700; letter-spacing:3px; }
+    .brand span { color:var(--green); margin-left:5px; }
+    nav { display:flex; gap:30px; font-size:14px; color:var(--muted); }
+    nav a { padding:8px 0; border-bottom:1px solid transparent; }
+    nav a:hover { color:var(--green); border-bottom-color:var(--green); }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:64px; align-items:center; padding:92px 0 86px; }
+    h1 { font-family:inherit; color:#63695f; font-size:14px; font-weight:400; line-height:2.1; margin:0 0 12px; }
+    .intro { max-width:610px; color:#63695f; font-size:14px; line-height:2.1; }
+    .intro p { margin:0 0 12px; }
+    .art { width:100%; height:auto; color:var(--green); }
+    .content-section { border-top:1px solid var(--line); padding:36px 0 48px; scroll-margin-top:20px; }
+    .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:24px; }
+    .heading-left { display:flex; align-items:baseline; gap:18px; }
+    .number { color:#90988b; font-family:Georgia,serif; font-size:13px; }
+    h2 { font-weight:500; font-size:23px; letter-spacing:1px; margin:0; }
+    .section-en { font-size:10px; letter-spacing:2px; color:#838b7d; }
+    .description { color:var(--muted); font-size:14px; line-height:1.8; margin:0 0 25px 35px; }
+    .empty { margin-left:35px; display:flex; align-items:center; gap:17px; background:var(--soft); border:1px solid #e2e6d9; border-radius:4px; padding:22px 25px; }
+    .empty-icon { width:32px; height:32px; flex:none; color:#7f9075; }
+    .empty p { margin:0; color:#626e5d; font-size:14px; line-height:1.8; }
+    .empty small { display:block; color:#858d7e; font-size:12px; margin-top:3px; }
+    .about { display:grid; grid-template-columns:1fr 2fr; gap:32px; padding:40px 0 50px; }
+    .about p { margin:0; color:#6a7165; font-size:14px; line-height:2; }
+    footer { border-top:1px solid var(--line); padding:26px 0 36px; display:flex; justify-content:space-between; gap:20px; color:#81877a; font-size:12px; }
+    footer a:hover { color:var(--green); }
+    @media(max-width:760px) {
+      .wrap { width:calc(100% - 40px); }
+      header { min-height:88px; gap:12px; }
+      .brand { font-size:23px; }
+      nav { gap:17px; font-size:12px; }
+      .hero { grid-template-columns:minmax(0,1fr) 140px; gap:10px; padding:58px 0 52px; }
+      .intro { font-size:14px; }
+      .section-en { display:none; }
+      .empty,.description { margin-left:0; }
+      .about { grid-template-columns:1fr; gap:18px; }
+    }
+    @media(max-width:500px) {
+      .hero { display:block; position:relative; }
+      .art { display:none; }
+      nav { gap:14px; }
+      .empty { padding:18px; }
+      .content-section { padding-bottom:34px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="风落，返回首页顶部">风落<span>·</span></a>
+      <nav aria-label="主导航">
+        <a href="#notes">笔记与思考</a>
+        <a href="#projects">个人项目</a>
+        <a href="#about">关于</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="intro-title">
+        <div>
+          <!-- 修改个人介绍时，编辑下面的标题和段落即可。 -->
+          <h1 id="intro-title">你好，我是风落。</h1>
+          <div class="intro">
+            <p>一名信息类专业本科生。</p>
+            <p>对机器人、算法设计和机器学习感兴趣，目前在学习相关基础，也做一些小项目。</p>
+            <p>这里记录课程学习、个人实践与思考，分享整理后的笔记和报告。</p>
+          </div>
+        </div>
+        <!-- 纯装饰图形，不依赖外部图片或字体服务。 -->
+        <svg class="art" viewBox="0 0 260 300" fill="none" aria-hidden="true">
+          <circle cx="134" cy="145" r="102" stroke="#e0e4d7"/>
+          <circle cx="134" cy="145" r="75" stroke="#e6e9df" stroke-dasharray="2 7"/>
+          <path d="M42 223C91 192 113 141 146 74" stroke="#8b9c80" stroke-width="1.5"/>
+          <path d="M86 183C64 148 73 115 111 110C116 146 111 166 86 183Z" fill="#d5deca"/>
+          <path d="M110 148C109 106 129 86 159 86C159 118 143 139 110 148Z" fill="#b6c7a6"/>
+          <path d="M95 170C133 139 167 148 175 174C148 194 120 193 95 170Z" fill="#e0e6d7"/>
+          <path d="M121 120C150 99 178 109 181 129C156 147 137 142 121 120Z" fill="#c6d2ba"/>
+          <path d="M146 74C134 48 148 28 168 23C178 47 167 65 146 74Z" fill="#93ad81"/>
+          <path d="M42 223C91 192 113 141 146 74" stroke="#718865" stroke-width="1.5"/>
+          <path d="M33 250H227" stroke="#dce1d3"/>
+          <circle cx="204" cy="62" r="3" fill="#a5b596"/>
+          <path d="M45 75H53M49 71V79" stroke="#b7c1ac"/>
+          <text x="130" y="276" text-anchor="middle" fill="#8c9684" font-family="Georgia, serif" font-size="10" letter-spacing="3">A SPACE TO GROW</text>
+        </svg>
+      </section>
+
+      <section id="notes" class="content-section" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <div class="heading-left"><span class="number">01</span><h2 id="notes-title">笔记与思考</h2></div>
+          <span class="section-en">NOTES & THOUGHTS</span>
+        </div>
+        <p class="description">专业课程学习、兴趣方向阅读记录，以及还在思考的问题。</p>
+        <!-- 目前没有发布文章，因此显示真实的空状态。以后用文章链接替换这一块。 -->
+        <div class="empty">
+          <svg class="empty-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="7" y="4" width="20" height="24" rx="2" stroke="currentColor"/><path d="M11 4V28M15 11H23M15 16H23M15 21H20M4 10H8M4 22H8" stroke="currentColor"/></svg>
+          <div><p>这里还没有发布笔记。</p><small>整理好的内容，会陆续放在这里。</small></div>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div class="heading-left"><span class="number">02</span><h2 id="projects-title">个人项目</h2></div>
+          <span class="section-en">PROJECTS & PRACTICE</span>
+        </div>
+        <p class="description">一些动手实践，记录想法、实现过程与收获。</p>
+        <!-- 只添加决定公开的个人项目，不放团队项目或私人资料。 -->
+        <div class="empty">
+          <svg class="empty-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 9A2 2 0 0 1 6 7H13L16 10H26A2 2 0 0 1 28 12V25A2 2 0 0 1 26 27H6A2 2 0 0 1 4 25Z" stroke="currentColor"/><path d="M13 16L10 19L13 22M19 16L22 19L19 22" stroke="currentColor"/></svg>
+          <div><p>这里还没有发布项目。</p><small>准备好后，再分享具体的实践与记录。</small></div>
+        </div>
+      </section>
+
+      <section id="about" class="content-section about" aria-labelledby="about-title">
+        <div class="heading-left"><span class="number">03</span><h2 id="about-title">关于这里</h2></div>
+        <p>这是我的个人学习与记录空间。内容会随学习逐步补充，并随理解进行更新。感谢大家的阅读，欢迎批评指正。</p>
+      </section>
+    </main>
+    <footer><span>风落 · 学习与记录</span><a href="#top">回到顶部 ↑</a></footer>
+  </div>
+</body>
+</html>
